@@ -24,7 +24,7 @@ const carparkingUserModelschema = mongoose.Schema({
 })
 
 
-module.exports = mongoose.model('carparkingUserschema',carparkingUserModelschema)
+module.exports = mongoose.model('carparkingUserModelschema',carparkingUserModelschema)
 
 
 // var mongoose = require('mongoose')
