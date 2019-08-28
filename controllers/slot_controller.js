@@ -26,7 +26,7 @@ carparkingSlotBooked_model.find({userId:req.body.userId,datebooked:req.body.arri
 
        }else{
            res.json({
-               code : 500, 
+               Errorcode : 500, 
                Message: err
            })
        }
