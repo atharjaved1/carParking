@@ -1,5 +1,9 @@
 var mongoose = require('mongoose')
 
+// bcrypt = require("bcrypt-nodejs");
+
+// SALT_WORK_FACTOR = 10;
+
 const carparkingUserModelschema = mongoose.Schema({
     name:{
         type:String,
@@ -25,12 +29,8 @@ module.exports = mongoose.model('carparkingUserschema',carparkingUserModelschema
 
 
 // var mongoose = require('mongoose')
-
-// bcrypt = require("bcrypt-nodejs");
-
-// SALT_WORK_FACTOR = 10;
-
-// const parkingSchema = mongoose.Schema({
+ 
+// const carparkingUserModelschema = mongoose.Schema({
 
     // name:{
     //     type:String,
@@ -53,7 +53,7 @@ module.exports = mongoose.model('carparkingUserschema',carparkingUserModelschema
 
 //  pre save
 
-// parkingSchema.pre("save", function(next){
+// carparkingUserModelschema.pre("save", function(next){
 //     // call all schema elements
 //     var carParkUserData = this;
 
@@ -73,7 +73,7 @@ module.exports = mongoose.model('carparkingUserschema',carparkingUserModelschema
 //     });
 // });
 
-// parkingSchema.method.comparePassword = function(candidatePassword, cb){
+// carparkingUserModelschema.method.comparePassword = function(candidatePassword, cb){
 //     bcrypt.compare(candidatePassword, this.password, function(err, isMatch){
 //         if(err) return cb(err);
 
@@ -82,7 +82,7 @@ module.exports = mongoose.model('carparkingUserschema',carparkingUserModelschema
 // }
 
 
-// module.exports = mongoose.model('parkingSchema',parkingSchema);.
+// module.exports = mongoose.model('carparkingUserModelschema',carparkingUserModelschema);.
 
 
 
