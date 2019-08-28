@@ -1,3 +1,29 @@
+var mongoose = require('mongoose')
+
+const carparkingUserModelschema = mongoose.Schema({
+    name:{
+        type:String,
+        require:true
+    },
+    email: {   
+        type: String,
+        require: true,
+        index:{unique:true}
+    },
+    password:{
+        type:String,
+        require:true
+    },
+    enterdate:{
+        type:Date,
+        default:Date.now
+    }
+})
+
+
+module.exports = mongoose.model('carparkingUserschema',carparkingUserModelschema)
+
+
 // var mongoose = require('mongoose')
 
 // bcrypt = require("bcrypt-nodejs");
@@ -6,29 +32,26 @@
 
 // const parkingSchema = mongoose.Schema({
 
-//     first_name: {
-//         type: String,
-//         require: true
-//     },
-//     last_name:{
-//         type:String,
-//         require:true
-
-//     },
-
-//     email: {   
-//         type: String,
-//         require: true,
-//         index:{unique:true}
-//     },
-//     password:{
-//         type:String,
-//         require:true
-//     } 
-
+    // name:{
+    //     type:String,
+    //     require:true
+    // },
+    // email: {   
+    //     type: String,
+    //     require: true,
+    //     index:{unique:true}
+    // },
+    // password:{
+    //     type:String,
+    //     require:true
+    // },
+    // enterdate:{
+    //     type:Date,
+    //     default:Date.now
+    // }
 // })
 
-// // pre save
+//  pre save
 
 // parkingSchema.pre("save", function(next){
 //     // call all schema elements
@@ -63,26 +86,3 @@
 
 
 
-var mongoose = require('mongoose')
-const carparkingUserModelschema = mongoose.Schema({
-    name:{
-        type:String,
-        require:true
-    },
-    email: {   
-        type: String,
-        require: true,
-        index:{unique:true}
-    },
-    password:{
-        type:String,
-        require:true
-    },
-    enterdate:{
-        type:Date,
-        default:Date.now
-    }
-})
-
-
-module.exports = mongoose.model('carparkingUserschema',carparkingUserModelschema)

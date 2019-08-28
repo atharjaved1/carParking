@@ -2,7 +2,7 @@ const carparkingSlotBooked_model = require('../models/slots_model')
 
 const carparkingBooked_Slot= (req,res)=>{
  
-// return;
+
 carparkingSlotBooked_model.find({userId:req.body.userId,datebooked:req.body.arrivalDate},(err,result)=>{
  
        if ( result == '' ) {
@@ -15,11 +15,11 @@ carparkingSlotBooked_model.find({userId:req.body.userId,datebooked:req.body.arri
                     res.send(err);
                     return false;
                     res.status(500).json({
-                        message:"erroor"
+                        message:"some technical error. Please try again."
                     })
                 }else{
                     res.status(200).json({
-                        message:'Reservation confirmed',result
+                        message:'Slot has been Confirmed. ',result
                     })
                 }
                 })
@@ -27,7 +27,7 @@ carparkingSlotBooked_model.find({userId:req.body.userId,datebooked:req.body.arri
        }else{
            res.json({
                code : 500, 
-               mesg: err
+               Message: err
            })
        }
         

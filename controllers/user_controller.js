@@ -1,20 +1,3 @@
-// const login = (req, res, next) =>{
-//     var email = req.body.email;
-//     var password = req.body.password;
-//     console.log(email, password);
-//     parkingSchema.find({email:email, password:password}, (err, result)=>{
-         
-//         if(err){
-//             res.send("Record not match! Please try again");
-//         } 
-//         res.status(200).json({
-//             message: "Successfully Login",
-//             result
-//         })
-//     })
-
-
-// };
 const carparkingUser_model = require('../models/user_model')
 
 
@@ -43,3 +26,21 @@ module.exports =  {
     carParkingUser_saveData
 }
 
+
+// const login = (req, res, next) =>{
+//     var email = req.body.email;
+//     var password = req.body.password;
+//     console.log(email, password);
+//     parkingSchema.find({email:email, password:password}, (err, result)=>{
+         
+//         if(err){
+//             res.send("Record not match! Please try again");
+//         } 
+//         res.status(200).json({
+//             message: "Successfully Login",
+//             result
+//         })
+//     })
+
+
+// };
