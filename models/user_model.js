@@ -1,7 +1,6 @@
 var mongoose = require('mongoose')
 
 // bcrypt = require("bcrypt-nodejs");
-
 // SALT_WORK_FACTOR = 10;
 
 const carparkingUserModelschema = mongoose.Schema({
