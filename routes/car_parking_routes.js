@@ -4,7 +4,8 @@ const carparkingUser_controller = require('../controllers/user_controller')
 const carparkingBooked_controller = require('../controllers/slot_controller')
 
 router.post('/carParkUserSave',carparkingUser_controller.carParkingUser_saveData)
-router.get('/bookedData',carparkingBooked_controller.carparkingBooked_Slot)
+router.get('/bookedData',carparkingBooked_controller.carparkingBooked_Slot);
+router.post('/login', carparkingUser_controller.login);
 
 
 

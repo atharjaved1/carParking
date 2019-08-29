@@ -1,5 +1,6 @@
 var mongoose = require('mongoose');
-bcrypt = require("bcrypt-nodejs");
+var bcrypt=require("bcrypt-node");
+
 SALT_WORK_FACTOR = 10;
 
 const carparkingUserModelschema = mongoose.Schema({
@@ -45,14 +46,16 @@ carparkingUserModelschema.pre("save", function(next){
     });
 });
 
-//compare password 
-carparkingUserModelschema.method.comparePassword = function(candidatePassword, cb){
-    bcrypt.compare(candidatePassword, this.password, function(err, isMatch){
-        if(err) return cb(err);
+// compare password 
+ 
 
-        cb(null, isMatch);
-    })
+carparkingUserModelschema.methods.comparePassword = function(candidatePassword, cb) {
+    bcrypt.compare(candidatePassword, this.password, function(err, isMatch) {
+     if (err) return cb(err);
+     cb(null, isMatch);
+    });
 }
+
 
 //export schema
 module.exports = mongoose.model('carparkingUserModelschema',carparkingUserModelschema)
